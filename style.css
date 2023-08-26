@@ -1,0 +1,459 @@
+:root{
+    --primcol:#335FF4;
+    --backDrop:#EBEFFD;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.flexUtil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* <------ Navbar ------> */
+
+.navbar{
+    padding: 1.2% 10%;
+    background-color: var(--backDrop);
+    justify-content: space-between;
+}
+
+    .navbar h1{
+        color: #335FF4;
+    }
+
+    .link a{
+        text-decoration: none;
+        color: black;
+        margin-left: 20px;
+    }
+
+/* ------- hero ------- */
+.hero{
+    padding: 3% 5%;
+    width: 100%;
+    height: 92vh;
+    background-color: var(--primcol);
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.heroLeft{
+    width: 40%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.heroLeft>h1,p{
+    text-align: start;
+    letter-spacing: 0.5px;
+}
+
+.heroLeft button{
+    background-color: white;
+    width: 50%;
+    padding: 10px 5px;
+    border-radius: 20px;
+    border: none;
+    color:var(--primcol);
+    font-weight: 600;
+}
+
+.heroRight{
+    width: 40%;
+    padding: 3%;
+    overflow: hidden;
+}
+
+.heroRight > img{
+    width: 100%;
+    /* width: 60%; */
+    object-fit: cover;
+}
+
+@media (max-width:700px){
+    .hero {
+        height: auto;
+        padding: 10% 10%;
+        flex-direction: column;
+    }
+    .heroLeft{
+        width: 100%;
+    }
+    .heroRight{
+        width: 100%;
+        
+    }
+}
+
+.about{
+    width: 100%;
+    padding: 3% 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--backDrop);
+}
+
+.aboutImg>img{
+    max-width: 100%;
+    margin: 0 auto;
+    border-image-outset: 5px white;
+}
+
+
+/* --------Services-------- */
+
+.services{
+    width: 100%;
+    height: 100vh;
+    padding: 2% 0;
+    background-color: var(--backDrop);
+}
+
+.serviceHeader>p,h3{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.secLeft>h1{
+    text-align: start;
+    color: black;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.buttons>button{
+    background-color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: 0.1px solid rgba(0,0,0,0.1);
+    color: black;
+    font-size: 1rem;
+    font-weight: 500; 
+    margin-inline: 10px;
+}
+
+.services> .buttons :nth-child(1){
+    background-color: #335FF4;
+    color: white;
+}  
+
+.sec{
+    padding: 3% 5%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.sec > .secLeft{
+    /* width: 50%; */
+    width: 40%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+.sec > .secRight{
+    max-width: 35%;
+    border-radius: 15px;
+    background-color: var(--primcol);
+    border: 1px solid #335FF4;
+    overflow: hidden;
+}
+
+.secRight>img{
+    width: fit-content;
+    object-fit: cover;
+}
+.secLeft>button{
+    background-color: var(--primcol);
+    width: 50%;
+    padding: 10px 5px;
+    border-radius: 20px;
+    border: none;
+    color:white;
+    font-weight: 600;
+}
+
+@media (max-width:700px){
+    .services{
+        height: auto;
+    }
+    .sec{
+        width: 100%;
+        flex-direction: column;
+    }
+    .sec>.secLeft{
+        width: 100%;
+    }
+    .sec>.secRight{
+        width: 100%;
+        height: 300px;
+    }
+    .sec >.secLeft>button{
+        display: none;
+    }
+    .buttons>button{
+        
+        margin-inline: 2px;
+    }
+}
+
+/* -------courses----- */
+.courses{
+    background-color: var(--backDrop);
+    padding: 3%;
+}
+
+.courses>.buttons{
+    margin: 0;
+}
+.courses>.buttons :nth-child(2){
+    background-color: #335FF4;
+    color: white;
+
+}
+
+.courseCards{
+    width: 100%;
+    padding-top: 3%;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 350px;
+    padding: 8px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.card>h4{
+    width: 100%;
+    text-align: start;
+}
+
+.card>button{
+    background-color: var(--primcol);
+    padding: 15px 10px;
+    border-radius: 20px;
+    border: none;
+    color:white;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.consultation{
+    background-color: var(--backDrop);
+    padding: 3%;
+}
+
+.svg{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 3%;
+    background-color: var(--backDrop);
+}
+.svg > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.venue{
+    display: flex;
+}
+
+.consultation> .buttons :nth-child(3){
+    background-color: #335FF4;
+    color: white;
+}
+
+@media (max-width: 700px){
+    .courseCards{
+        flex-direction: column;
+    }
+}
+
+/* ---------testimonial------- */
+        .testimonials{
+            background-color: var(--backDrop);
+            padding: 3%;
+            font-size: 1rem;
+        }
+
+        .testimonials>p,h3{
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .testimonials>.card{
+            align-items: center;
+            justify-content: center;
+        }
+
+        .testimonials>.card>p,h3{
+            width: 100%;
+            text-align: justify;
+
+        }
+        .testimg{
+            width:60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 50%;
+            align-self: center;
+        }
+/* --------contact------- */
+        .contactSect{
+            width: 100%;
+            padding: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .contactSect > h4,h3{
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .Owner>p{
+            width: 100%;
+            text-align: center;
+        }
+
+        .contacts{
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .contactCard{
+            display: flex;
+            gap: 10px;
+        }
+
+        .name :nth-child(1){
+            font-weight: 400;
+            color: gray;
+        }
+
+        .contactCard>img{
+            width: 40px;
+            height: 40px;
+        }
+
+/* ---------footer------ */
+        .footer{
+            width: 100%;
+            display: grid;
+            padding-top:5%;
+            padding-bottom: 1%;
+            place-items: center;
+            background-color: var(--primcol);
+            color: white;
+            gap: 30px;
+        }
+        .logo{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        .logo> li{
+            width:40px;
+            height: 40px;
+            margin-inline: 20px;
+        }
+        li>img{
+            width: 100%;
+            height: auto;
+        }
+        .source>img{
+            margin-inline: 10px;
+        }
+.domImg{
+    width: 100%;
+    height:70vh;
+    padding: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 50px;
+    background-color: var(--primcol);
+}
+
+.domImg :nth-child(1){
+    height: 100%;
+}
+
+.domImg>img{
+    max-width: 40%;
+}
+
+
+.circle{
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backDrop);
+}
+
+.join{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    z-index: 9;
+}
+.join>h3,h1{
+    color: white;
+    text-align: center;
+}
+.join> button{
+    background-color: white;
+    width: 50%;
+    padding: 10px 10px;
+    border-radius: 20px;
+    border: none;
+    color:var(--primcol);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+
+.content{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 75vh;
+    background-color: #335FF4;
+    border-radius: 50% 50% 0 0/100% 100% 0 0;
+}
+
